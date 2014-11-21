@@ -2,6 +2,7 @@ $.InfiniteTweet = function (el, options) {
     this.$el = $(el);
     this.$el.find('a.fetch-more').on('click', this.fetchTweets.bind(this));
     this.lastCreatedAt = null;
+	debugger
     this.$el.on("insert-tweet", this.insertTweet.bind(this));
 };
 

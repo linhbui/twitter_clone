@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+div.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+div.container h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#sign-out-button{
+    background-color: #f8f8f8;
+    border-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+	color: #777;
+}
+
+#sign-out-button:hover {
+	color: black;
+}
+
+#charleft {
+	text-align: right;
+}
+

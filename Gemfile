@@ -23,8 +23,15 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'underscore-rails'
 
+gem 'bootstrap-sass'
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production, :staging do
+  gem 'pg'
+  gem 'rails_12factor'
 end

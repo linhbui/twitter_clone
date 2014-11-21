@@ -1,9 +1,9 @@
 $.TweetCompose = function (el) {
     this.$el = $(el);
     this.$el.on('submit', this.submitForm.bind(this));
-    this.$el.find('textarea').on('input', function(event) {
+    this.$el.find('.form-control').on('input', function(event) {
         var remaining = 140 - $(event.currentTarget).val().length;
-        this.$el.find('strong').text(remaining);
+        this.$el.find('strong.chars-left').text(remaining);
     }.bind(this));
     this.$el.find('a.add-mentioned-user').on('click', this.addMentionedUser.bind(this))
     this.$el.on('click', 'a.remove-mentioned-user', this.removeMentionedUser.bind(this))
@@ -23,7 +23,7 @@ $.TweetCompose.prototype.submitForm = function (event) {
 };
 
 $.TweetCompose.prototype.clearInput = function () {
-    this.$el.find('textarea').val('');
+    this.$el.find('.form-control').val('');
     this.$el.find('.mentioned-users').empty();   
 };
 

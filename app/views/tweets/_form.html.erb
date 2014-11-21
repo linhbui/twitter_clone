@@ -1,14 +1,19 @@
-<h2>New Tweet!</h2>
-<form class="tweet-compose" data-tweets-ul="#feed">
-
+<h3>New Tweet!</h3>
+<form class="tweet-compose" data-tweets-ul="#feed" style="margin:0 auto; width: 100%;">
+   
+  <div class="form-group" style="margin-bottom: 0px;"> 
+  <label for="tweet_content">Content</label>
+  <input type="text"
+         name="tweet[content]"
+         id="tweet_content" 
+		 class="form-control" rows="2">
+  </div>
+  <div class="row">
+  <div id="charleft" class="col-xs-3 col-xs-offset-9">
+    <strong class="chars-left">140 </strong> chars left
+  </div>
+  <div class="col-xs-9">
   <label>
-    Content
-    <textarea name="tweet[content]"></textarea>
-  </label>
-  <br>
-    <strong class="chars-left">140 chars left</strong>
-  <label>
-      <br>
     Mention
     <script type="text/template">
       <div>
@@ -26,6 +31,8 @@
   <br>
   <div class="mentioned-users">
   </div>
-
-  <input type="Submit" value="Post Tweet!">
+</div> <!-- close col for mention -->
+</div> <!-- close row -->
+<br>
+  <input type="Submit" value="Post Tweet!" class="btn btn-primary">
 </form>

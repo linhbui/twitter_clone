@@ -3,7 +3,6 @@ class TweetsController < ApplicationController
 
   def create
     # simulate latency
-    sleep(1)
 
     @tweet = current_user.tweets.build(tweet_params)
 

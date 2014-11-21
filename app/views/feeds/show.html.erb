@@ -1,5 +1,7 @@
 <h1>Welcome <%= current_user.username %>!</h1>
 
+<div id='content' class="col-xs-6 col-xs-offset-3">
+<%= render "tweets/form" %>
 <b>Your Feed!</b>
 <div class="infinite-tweets">
     <script type"text/template" id="tweet-template">
@@ -23,4 +25,4 @@
   <a class="fetch-more" href="javascript:void(0)">Fetch Tweets</a>
 </div>
 
-<%= render "tweets/form" %>
+</div>
